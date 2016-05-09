@@ -1,3 +1,6 @@
+# Up1-docker
+Dockerfile for [Up1](https://github.com/Upload/Up1), a client-side encrypted file hosting service
+
 # How to use Up1-docker
 Configuration parameters need to be passed as environment variables to `docker run`, or if you prefer you could edit the Dockerfile and rebuild the container.
 
