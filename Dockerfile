@@ -3,7 +3,7 @@ MAINTAINER fcremo@users.github.com
 
 EXPOSE 9000:9000
 
-ENV 	HTTP="true" \
+ENV HTTP="true" \
 	HTTP_LISTEN="0.0.0.0:9000" \
 	HTTPS="false" \
 	HTTPS_LISTEN=":443" \
@@ -22,9 +22,9 @@ RUN apt-get install -y git && \
 WORKDIR /srv/Up1/server
 
 COPY server.conf.template server.conf.template
+COPY config.js.template ../client/config.js.template
 COPY genconfig.sh genconfig.sh
 COPY entrypoint.sh entrypoint.sh
-COPY config.js.template ../client/config.js.template
 
 RUN chmod +x genconfig.sh entrypoint.sh
 
