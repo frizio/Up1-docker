@@ -1,7 +1,8 @@
 FROM node:latest
-MAINTAINER fcremo@users.github.com
+LABEL maintainer=1vercesig@users.github.com
+LABEL version=1.0.0
 
-EXPOSE 9000:9000
+EXPOSE 9000/tcp
 
 ENV HTTP="true" \
 	HTTP_LISTEN="0.0.0.0:9000" \
